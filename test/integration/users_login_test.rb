@@ -14,4 +14,12 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
                                           password: "foobar" } }
     assert_response 200
   end
+
+  test "login with valid information followed by logout" do
+    get login_path
+    post login_path, params: { session: { email:    "example@railstutorial.org",
+                                          password: "foobar" } }
+    assert is_logged_in?
+    delete logout_path
+    assert_not is_logged_in?
 end
