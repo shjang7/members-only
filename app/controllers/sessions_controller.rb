@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       login user
       user.generate_token
       remember(user)
-      render user
+      puts session[:user_id]
     else
       render 'new'
     end
