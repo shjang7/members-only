@@ -1,6 +1,38 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$border-style: 0.5px solid #ccc;
+
 h1{
   text-align: center;
+}
+
+body {
+  margin-top: 7rem;
+}
+
+.main-title {
+  font-size: 3rem;
+}
+
+.text-white {
+  color: white;
+  &:hover {
+    color: white;
+  }
+}
+
+.divider {
+  border: $border-style;
+}
+
+.my-3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+input, textarea {
+  border: $border-style;
+  width: 100%;
+  margin-bottom: 1.5rem;
 }

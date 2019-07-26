@@ -2,13 +2,25 @@
 
 This is part of the Authentication Project in The Odin Project’s Ruby on Rails Curriculum. Find it at [here](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication).
 
+## Function description
+
+1. Log In
+   - log in status remains while user moves page to page
+
+2. Log Out
+   - deletes log in status
+
+3. Post List
+   - the author’s name can be displayed only if a user is signed in.
+
+4. Post Write
+   - log in status : move to "post write" screen
+   - log out status : move to "log in" screen
+
 ## Technology
 
 - Ruby 2.6.3
 - Rails 5.2.3
-
-## Project Description
-
 
 ## Getting started
 

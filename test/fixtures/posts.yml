@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+simon:
+  content: "sample content 1"
+  user_id: 1
+
+suhyeon:
+  content: "sample content 2"
+  user_id: 2
+
+michael:
+  content: "Michael post content"
+  user_id: 3
