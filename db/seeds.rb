@@ -12,3 +12,8 @@ User.create!(name:  "Example User",
               password:              password,
               password_confirmation: password)
 end
+
+User.all[0...5].each do |user|
+  content = Faker::Lorem.sentence(5)
+  Post.create!(content: content, user_id: user.id)
+end

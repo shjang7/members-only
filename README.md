@@ -5,7 +5,9 @@ This is part of the Authentication Project in The Odin Project’s Ruby on Rails
 ## Function description
 
 1. Log In
-   - log in status remains while user moves page to page
+   - log in status remains while
+      * user moves page to page
+      * without logout, user close browser and open it again
 
 2. Log Out
    - deletes log in status
@@ -15,7 +17,7 @@ This is part of the Authentication Project in The Odin Project’s Ruby on Rails
 
 4. Post Write
    - log in status : move to "post write" screen
-   - log out status : move to "log in" screen
+   - log out status : ask "log in"
 
 ## Technology
 

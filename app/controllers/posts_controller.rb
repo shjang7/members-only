@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   before_action :is_signed_in?, only: [:new, :create]
 
   def new
-    redirect_to login_path unless is_signed_in?
     @post = Post.new
   end
 
