@@ -1,19 +1,21 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class PostsControllerTest < ActionDispatch::IntegrationTest
   def setup
     @user = users(:michael)
-    @post = Post.new(content: "Lorem ipsum", user_id: @user.id)
+    @post = Post.new(content: 'Lorem ipsum', user_id: @user.id)
   end
 
   test 'should inform login when not logged in to write a post' do
     get posts_path
     assert_not is_logged_in?
     get new_post_path
-    assert_select "a[href=?]", login_path
+    assert_select 'a[href=?]', login_path
   end
 
-  test "should redirect posts path with valid post" do
+  test 'should redirect posts path with valid post' do
     log_in_as @post.user
     assert is_logged_in?
     get new_post_path
