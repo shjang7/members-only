@@ -22,9 +22,17 @@ module SessionsHelper
       user = User.find_by(id: user_id)
       if user&.authenticated?(cookies[:remember_token])
         sign_in user
-        @current_user = user
+        current_user = user
       end
     end
+  end
+
+  def current_user=(user)
+    @current_user = user
+  end
+
+  def current_user?(user)
+    current_user && current_user == user
   end
 
   # Logs out the current user.
