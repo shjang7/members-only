@@ -1,17 +1,9 @@
 <h1>Write New Post</h1>
 
 <div class="field">
-  <% if is_signed_in? %>
-    <%= form_with model: @post do |form| %>
-      <%= form.label :content, "#{current_user.name}\'s post" %>
-      <%= form.text_area :content, placeholder: "Write text" %>
-      <%= form.submit "Submit", class: "btn btn-primary my-3" %>
-    <% end %>
-  <% else %>
-    <div class="col-md-4 col-md-offset-4 my-3">
-      Please log in to write a post
-    </div>
-    <%= link_to "Log in", login_path,
-                      class: "btn btn-primary col-md-4 col-md-offset-4 my-3" %>
+  <%= form_with model: @post do |form| %>
+    <%= form.label :content, "#{ current_user.name }\'s post" %>
+    <%= form.text_area :content, placeholder: "Write text" %>
+    <%= form.submit "Submit", class: "btn btn-primary my-3" %>
   <% end %>
 </div>

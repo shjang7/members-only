@@ -17,7 +17,7 @@ This is part of the Authentication Project in The Odin Project’s Ruby on Rails
 
 4. Post Write
    - log in status : move to "post write" screen
-   - log out status : ask "log in"
+   - log out status : move to "log in" screen
 
 ## Technology
 

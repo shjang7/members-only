@@ -5,5 +5,5 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   include PostsHelper
 
-  helper_method :is_signed_in?, :current_user
+  helper_method :is_signed_in?, :current_user, :current_user?
 end
