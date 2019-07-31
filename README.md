@@ -2,13 +2,30 @@
 
 This is part of the Authentication Project in The Odin Project’s Ruby on Rails Curriculum. Find it at [here](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication).
 
+## Function description
+
+1. Sign up
+   - after sign up, the status becomes signed in
+
+2. Log In
+   - log in status remains while
+      * user moves page to page
+      * without logout, user close browser and open it again
+
+3. Log Out
+   - deletes log in status
+
+4. Post List
+   - the author’s name can be displayed only if a user is signed in.
+
+5. Post Write
+   - log in status : move to "post write" screen
+   - log out status : move to "log in" screen
+
 ## Technology
 
 - Ruby 2.6.3
 - Rails 5.2.3
-
-## Project Description
-
 
 ## Getting started
 
@@ -22,6 +39,12 @@ Next, migrate the database:
 
 ```
 $ rails db:migrate
+```
+
+Then, load data from seed into the database:
+
+```
+$ rails db:seed
 ```
 
 Finally, run the test suite to verify that everything is working correctly:
