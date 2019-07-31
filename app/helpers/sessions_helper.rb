@@ -44,7 +44,7 @@ module SessionsHelper
   end
 
   # Check log in status
-  def is_signed_in?
+  def signed_in?
     !current_user.nil?
   end
 end

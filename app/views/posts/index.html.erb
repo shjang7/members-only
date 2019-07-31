@@ -1,18 +1,14 @@
 <h1>All Posts</h1>
 
-<%#= will_paginate %>
-
-<div class="btn btn-primary my-3">
-  <%= link_to "Post Write", new_post_path(:id), class: "text-white" %>
-</div>
+<%= link_to "Post Write", new_post_path, class: "btn btn-primary my-3" %>
 
 <ul class="posts center jumbotron">
   <% @posts.each do |post| %>
     <li class="post my-3">
       <%= post.content %>
-        <% if current_user?(post.user) %>
-          | by <span class="author"><%= post.user.name %></span>
-        <% end %>
+      <% if current_user?(post.user) %>
+        | by <span class="author"><%= post.user.name %></span>
+      <% end %>
     </li>
     <div class="divider"></div>
   <% end %>

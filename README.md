@@ -4,18 +4,21 @@ This is part of the Authentication Project in The Odin Project’s Ruby on Rails
 
 ## Function description
 
-1. Log In
+1. Sign up
+   - after sign up, the status becomes signed in
+
+2. Log In
    - log in status remains while
       * user moves page to page
       * without logout, user close browser and open it again
 
-2. Log Out
+3. Log Out
    - deletes log in status
 
-3. Post List
+4. Post List
    - the author’s name can be displayed only if a user is signed in.
 
-4. Post Write
+5. Post Write
    - log in status : move to "post write" screen
    - log out status : move to "log in" screen
 
@@ -36,6 +39,12 @@ Next, migrate the database:
 
 ```
 $ rails db:migrate
+```
+
+Then, load data from seed into the database:
+
+```
+$ rails db:seed
 ```
 
 Finally, run the test suite to verify that everything is working correctly:

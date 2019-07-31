@@ -2,6 +2,6 @@
 
 module PostsHelper
   def require_login
-    redirect_to login_path unless is_signed_in?
+    redirect_to login_path unless signed_in?
   end
 end

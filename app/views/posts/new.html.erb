@@ -1,9 +1,13 @@
 <h1>Write New Post</h1>
 
 <div class="field">
-  <%= form_with model: @post do |form| %>
-    <%= form.label :content, "#{ current_user.name }\'s post" %>
-    <%= form.text_area :content, placeholder: "Write text" %>
-    <%= form.submit "Submit", class: "btn btn-primary my-3" %>
+  <%= form_for(@post) do |f| %>
+    <%= render "shared/error_messages", object: f.object %>
+
+    <div class="field">
+      <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+    </div>
+    
+    <%= f.submit "Post", class: "btn btn-primary" %>
   <% end %>
 </div>

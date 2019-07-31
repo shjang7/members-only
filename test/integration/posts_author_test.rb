@@ -18,7 +18,7 @@ class PostsAuthorTest < ActionDispatch::IntegrationTest
       assert_select 'li.post span.author', text: @post.user.name.to_s, count: 0
     end
     log_in_as @post.user
-    assert is_logged_in?
+    assert logged_in?
     get new_post_path
     post posts_path, params: { post: { content: @post.content,
                                        user_id: @post.user.id } }
@@ -28,13 +28,13 @@ class PostsAuthorTest < ActionDispatch::IntegrationTest
       assert_select 'li.post span.author', text: @post.user.name.to_s, count: 1
     end
     delete logout_path
-    assert_not is_logged_in?
+    assert_not logged_in?
     get posts_path
     assert_select 'ul.posts' do
       assert_select 'li.post span.author', text: @post.user.name.to_s, count: 0
     end
     log_in_as @other_post.user
-    assert is_logged_in?
+    assert logged_in?
     post posts_path, params: { post: { content: @other_post.content,
                                        user_id: @other_post.user.id } }
     assert_redirected_to posts_path
